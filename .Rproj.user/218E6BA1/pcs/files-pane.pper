@@ -1,0 +1,9 @@
+{
+    "path" : "~/gerrymandering2019",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}
