@@ -28,7 +28,7 @@ wastedvotes_dem = case_when(
   demvotes > republicanvotes ~ round(demvotes-((demvotes+republicanvotes)/2)-1, digit = 0)
 ),
   total_statevotes = demvotes+republicanvotes,
-  eg = abs(wastedvotes_dem - wastedvotes_rep)/total_statevotes) %>% select(state,eg)
+  eg = abs((wastedvotes_dem - wastedvotes_rep)/total_statevotes)) %>% select(state,eg)
 
 glimpse(eg_1976)
 
@@ -56,7 +56,7 @@ wastedvotes_dem = case_when(
   demvotes > republicanvotes ~ round(demvotes-((demvotes+republicanvotes)/2)-1, digit = 0)
 ),
   total_statevotes = demvotes+republicanvotes,
-  eg = abs(wastedvotes_dem - wastedvotes_rep)/total_statevotes) %>% select(state,eg)
+  eg = abs((wastedvotes_dem - wastedvotes_rep)/total_statevotes)) %>% select(state,eg)
 
 glimpse(eg_1996)
 
@@ -84,7 +84,7 @@ wastedvotes_dem = case_when(
   demvotes > republicanvotes ~ round(demvotes-((demvotes+republicanvotes)/2)-1, digit = 0)
 ),
   total_statevotes = demvotes+republicanvotes,
-  eg = abs(wastedvotes_dem - wastedvotes_rep)/total_statevotes) %>% select(state,eg)
+  eg = abs((wastedvotes_dem - wastedvotes_rep)/total_statevotes)) %>% select(state,eg)
 
 glimpse(eg_2016)
 

@@ -208,7 +208,7 @@ wastedvotes_dem = case_when(
   demvotes &gt; republicanvotes ~ round(demvotes-((demvotes+republicanvotes)/2)-1, digit = 0)
 ),
   total_statevotes = demvotes+republicanvotes,
-  eg = abs(wastedvotes_dem - wastedvotes_rep)/total_statevotes) %&gt;% select(state,eg)
+  eg = abs((wastedvotes_dem - wastedvotes_rep)/total_statevotes)) %&gt;% select(state,eg)
 
 glimpse(eg_1976)</code></pre>
 <pre><code>## Observations: 49
@@ -232,7 +232,7 @@ wastedvotes_dem = case_when(
   demvotes &gt; republicanvotes ~ round(demvotes-((demvotes+republicanvotes)/2)-1, digit = 0)
 ),
   total_statevotes = demvotes+republicanvotes,
-  eg = abs(wastedvotes_dem - wastedvotes_rep)/total_statevotes) %&gt;% select(state,eg)
+  eg = abs((wastedvotes_dem - wastedvotes_rep)/total_statevotes)) %&gt;% select(state,eg)
 
 glimpse(eg_1996)</code></pre>
 <pre><code>## Observations: 50
@@ -256,7 +256,7 @@ wastedvotes_dem = case_when(
   demvotes &gt; republicanvotes ~ round(demvotes-((demvotes+republicanvotes)/2)-1, digit = 0)
 ),
   total_statevotes = demvotes+republicanvotes,
-  eg = abs(wastedvotes_dem - wastedvotes_rep)/total_statevotes) %&gt;% select(state,eg)
+  eg = abs((wastedvotes_dem - wastedvotes_rep)/total_statevotes)) %&gt;% select(state,eg)
 
 glimpse(eg_2016)</code></pre>
 <pre><code>## Observations: 49
